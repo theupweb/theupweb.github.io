@@ -16,7 +16,12 @@ body{
     background-color: rgba(116, 154, 236, 0.7);
     width: auto;
     height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
+
+
 
 
 .heading-logo{
@@ -40,18 +45,38 @@ body{
     font-family: 'Muli', sans-serif;
     font-weight: 300;
     letter-spacing: 0.1rem;
+    position: relative;
+}
+
+.input-email{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-email input{
+    width: 40vw;
+    box-shadow: 0 5px 10px rgba(0,0,0, 0.3);
 }
 
 .input-email input:focus{
     outline: 0;
+
 }
 
-.input-email{
-    position: relative;
-}
 
 .input-email .btn{
     position: absolute;
-    bottom: -100px;
-    right: -10px;
+    bottom: 10px;
+    right: 20px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.07rem;
+    font-family: 'Muli', sans-serif;
+    font-weight: 600;
 }
+
+.btn:focus{
+    outline: 0;
+}
+
