@@ -6,13 +6,15 @@
     <title>TUP Web</title>
     <link rel="stylesheet" href="./styles/style.css">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </head>
 <body>
     <div class="mt-0 section-one">
         <div class="sec-one">
             <div class="content">
-                <div class="flex  justify-center pt-20 pb-10  text-white heading-logo">
+                <div data-aos="fade-up" data-aos-duration="2000" class="flex  justify-center pt-20 pb-10  text-white heading-logo">
                     The Unpretentious Web.
                 </div>
                 <div class="intro-container">
@@ -32,5 +34,8 @@
             </div>
         </div>
     </div>
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>

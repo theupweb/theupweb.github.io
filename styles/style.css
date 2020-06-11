@@ -28,6 +28,8 @@ body{
     align-items: center;
     justify-content: center;
     width: auto;
+    margin-left: 10vw;
+    margin-right: 10vw;
 }
 
 
@@ -115,11 +117,20 @@ body{
         height: 130vh;
     }
 
+    .content{
+        margin: 0;
+    }
+
     .intro-heading{
         font-size: 0.7rem;
         line-height: 20px;
         margin: 0;
         padding: 0;
+    }
+
+    .intro-description{
+        text-align: center;
+        line-height: 1.6rem;
     }
 
     .input-email button{
