@@ -7,21 +7,28 @@
 }
 
 body{
+ margin: 0;
+ overflow-x: hidden;
+}
 
+.section-one{   
     background: url(https://images.pexels.com/photos/269724/pexels-photo-269724.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat fixed center;
-    
-}
-
-.section-one{
-    background-color: rgba(116, 154, 236, 0.7);
     width: auto;
-    height: 100%;
-    align-items: center;
-    display: flex;
-    justify-content: center;
+    height: 100vh;
 }
 
+.sec-one{
+    background-color: rgba(49, 112, 250, 0.8);
+    width: 100vw;
+    height: 100vh;
+}
 
+.content{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}
 
 
 .heading-logo{
@@ -45,13 +52,15 @@ body{
     font-family: 'Muli', sans-serif;
     font-weight: 300;
     letter-spacing: 0.1rem;
-    position: relative;
+    display: inline-block;
+    align-items: center;
 }
 
 .input-email{
-    display: flex;
+    display: inline-block;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .input-email input{
@@ -61,22 +70,42 @@ body{
 
 .input-email input:focus{
     outline: 0;
-
 }
 
 
-.input-email .btn{
+.input-email button{
     position: absolute;
     bottom: 10px;
-    right: 20px;
+    right: 30vw;
     color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 0.07rem;
     font-family: 'Muli', sans-serif;
     font-weight: 600;
+    box-shadow: 0 5px 7px rgba(0,0,0, 0.3);
 }
 
 .btn:focus{
     outline: 0;
 }
 
+.btn:hover{
+    box-shadow: 0 10px 10px rgba(0,0,0, 0.3);
+}
+
+@media only screen and (max-width: 800px) {
+
+    .intro-heading{
+        font-size: 1.2rem;
+    }
+
+
+    .intro-description{
+        margin: 4vw;
+    }
+    
+    .input-email button{
+        bottom: 10px;
+        right: 5vw;
+    }
+}
