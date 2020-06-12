@@ -40,6 +40,7 @@ body{
     letter-spacing: 0.07rem;
 }
 
+
 .intro-heading{
     color: #ffffff;
     text-transform: uppercase;
@@ -78,7 +79,7 @@ body{
 .input-email button{
     position: absolute;
     bottom: 10px;
-    right: 30vw;
+    right: 23vw;
     color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 0.07rem;
@@ -93,6 +94,27 @@ body{
 
 .btn:hover{
     box-shadow: 0 10px 10px rgba(0,0,0, 0.3);
+}
+
+.section-card{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.card{
+    /* background-color: rgba(49, 112, 250, 0.4);
+    box-shadow: 0 10px 10px rgba(0,0,0, 0.3); */
+    border-radius: 5px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.card img{
+    margin: 20px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -114,7 +136,7 @@ body{
 
 @media only screen and (max-width: 500px){
     .section-one, .sec-one{
-        height: 130vh;
+        height: 140vh;
     }
 
     .content{
@@ -135,5 +157,21 @@ body{
 
     .input-email button{
         font-size: 0.7rem;
+    }
+
+    .section-card{
+        flex-direction: row;
+        padding: 0px;
+        margin: 0;
+    }
+
+    .card{
+        margin-bottom: 10px;
+    }
+
+    .card img{
+        width: 22px;
+        margin: 4px;
+
     }
 } 
