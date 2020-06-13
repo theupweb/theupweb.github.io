@@ -66,8 +66,13 @@ body{
     position: relative;
 }
 
+.input-text{
+    font-family: inherit;
+    letter-spacing: 0.1rem;
+    color: rgb(132, 134, 136);
+}
+
 .input-email input{
-    width: 40vw;
     box-shadow: 0 5px 10px rgba(0,0,0, 0.3);
 }
 
@@ -78,14 +83,19 @@ body{
 
 .input-email button{
     position: absolute;
-    bottom: 10px;
-    right: 23vw;
+    bottom: 33px;
+    right: 18vw;
     color: #ffffff;
+    padding: 15px 40px;
     text-transform: uppercase;
     letter-spacing: 0.07rem;
     font-family: 'Muli', sans-serif;
     font-weight: 600;
-    box-shadow: 0 5px 7px rgba(0,0,0, 0.3);
+}
+
+.btn{
+    box-shadow: 0 40px 405px rgb(12, 69, 192);
+
 }
 
 .btn:focus{
@@ -129,8 +139,8 @@ body{
     }
     
     .input-email button{
-        bottom: 10px;
-        right: 5vw;
+        bottom: 5vh;
+        right: 4vw;
     }
 }
 
@@ -157,6 +167,7 @@ body{
 
     .input-email button{
         font-size: 0.7rem;
+        padding: 10px 20px;
     }
 
     .section-card{
