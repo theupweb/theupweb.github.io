@@ -178,11 +178,12 @@ body{
 
     .card{
         margin-bottom: 10px;
+        margin-left: 15px;
     }
 
     .card img{
-        width: 22px;
-        margin: 4px;
+        width: 40px;
+        margin: 0px;
 
     }
 } 
