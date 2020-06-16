@@ -21,6 +21,9 @@ body{
     background-color: rgba(49, 112, 250, 0.9);
     width: 100vw;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .content{
