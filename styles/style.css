@@ -15,12 +15,16 @@ body{
     background: url("/images/2352.webp") no-repeat fixed center;
     width: 100%;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .sec-one{
     background-color: rgba(49, 112, 250, 0.9);
     width: 100vw;
     height: 100vh;
+   
 }
 
 .content{
@@ -36,6 +40,7 @@ body{
     display: flex;
     justify-content: center;
     margin-bottom: -80px;
+    padding-top: 2vh;
 }
 
 
@@ -116,6 +121,7 @@ body{
     display: flex;
     justify-content: space-evenly;
     margin: 20px;
+    margin-bottom: 0;
 }
 
 span strong{
@@ -123,20 +129,18 @@ span strong{
 }
 
 .card{
-    /* background-color: rgba(49, 112, 250, 0.4);
-    box-shadow: 0 10px 10px rgba(0,0,0, 0.3); */
+    box-shadow: 0 10px 10px rgba(0,0,0, 0.3);
     border-radius: 5px;
-    margin-left: 20px;
+    margin-left: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
 
 }
-.card img{
-    margin: 20px;
-    background-color: #ffffff;
-    border-radius: 30px;
-    padding: 5px;
+.card i{
+    margin: 10px;
+    font-size: 2rem;
+    color: #ffffff;
 }
 
 @media only screen and (max-width: 900px) {
@@ -159,7 +163,12 @@ span strong{
     }
 }
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 600px){
+
+    body{
+        overflow-x: hidden;
+    }
+
     .section-one, .sec-one{
         height: 150vh;
     }
@@ -177,7 +186,7 @@ span strong{
 
     .intro-description{
         text-align: center;
-        line-height: 1.6rem;
+        line-height: 1.5rem;
     }
 
     .input-email button{
@@ -186,7 +195,6 @@ span strong{
     }
 
     .section-card{
-        flex-direction: row;
         padding: 0px;
         margin: 0;
     }
@@ -206,3 +214,13 @@ span strong{
     }
 
 } 
+
+@media only screen and (max-width: 320px){
+    body{
+        overflow-x: hidden;
+    }
+    .intro-description{
+        line-height: 1.0rem;
+        font-size: 0.9rem;
+    }
+}
