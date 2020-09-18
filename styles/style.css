@@ -64,7 +64,7 @@ body{
     font-family: 'Muli', sans-serif;
     font-weight: 600;
     color: #fdfdfd;
-    margin-left: 25%;
+    margin-left: 20vw;
 }
 
 
@@ -75,6 +75,12 @@ body{
     letter-spacing: 0.1rem;
     display: inline-block;
     align-items: center;
+}
+
+.intro-container p{
+    color: #ffffff;
+    line-height: 20px;
+    font-size: 1.1rem;
 }
 
 .input-email{
