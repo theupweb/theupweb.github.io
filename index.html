@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxy/1.6.1/scripts/jquery.ajaxy.min.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
@@ -24,9 +25,11 @@
                       The Unpretentious Web
                     </h3>          
                 </div>
-                <form class="p-10 m-5 flex justify-center items-center input-email">
-                    <input class="flex-1 max-w-lg rounded-full p-5  input-text" placeholder="Email address" type="email">
-                    <button class="flex-1 max-w-md absolute bg-orange-500 rounded-full btn  p-4">Get Started</button>
+                <form class="p-10 m-5 flex justify-center items-center input-email" action="https://formspree.io/xqkgzvgp"
+                method="POST">
+                    <input class="flex-1 max-w-lg rounded-full p-5  input-text" placeholder="Email address" type="email" name="email">
+                    <button class="flex-1 max-w-md absolute bg-orange-500 rounded-full btn  p-4" type="submit" id="my-form-button">Get Started</button>
+                    <p id="my-form-status"></p>
                 </form>
                 <div class="intro-container">
                     <div class="intro-heading p-5 flex justify-center">
@@ -80,6 +83,54 @@
     </div>
     <script>
         AOS.init();
+      </script>
+
+      <script>
+        window.addEventListener("DOMContentLoaded", function() {
+      
+          // get the form elements defined in your form HTML above
+          
+          var form = document.getElementById("my-form");
+          var button = document.getElementById("my-form-button");
+          var status = document.getElementById("my-form-status");
+      
+          // Success and Error functions for after the form is submitted
+          
+          function success() {
+            form.reset();
+            button.style = "display: none ";
+            status.innerHTML = "Thanks! You will be receiving an inviation mail soon. Happy coding";
+          }
+      
+          function error() {
+            status.innerHTML = "Oops! There was a problem. Please mail us to unpwenb@gmail.com";
+          }
+      
+          // handle the form submission event
+      
+          form.addEventListener("submit", function(ev) {
+            ev.preventDefault();
+            var data = new FormData(form);
+            ajax(form.method, form.action, data, success, error);
+          });
+        });
+        
+        // helper function for sending an AJAX request
+      
+        function ajax(method, url, data, success, error) {
+          var xhr = new XMLHttpRequest();
+          xhr.open(method, url);
+          xhr.setRequestHeader("Accept", "application/json");
+          xhr.onreadystatechange = function() {
+            if (xhr.readyState !== XMLHttpRequest.DONE) return;
+            if (xhr.status === 200) {
+              success(xhr.response, xhr.responseType);
+            } else {
+              error(xhr.status, xhr.response, xhr.responseType);
+            }
+          };
+          xhr.send(data);
+        }
       </script>
 </body>
 </html>
